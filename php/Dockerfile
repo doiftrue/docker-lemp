@@ -99,6 +99,8 @@ RUN set -ex; \
 		echo 'source /usr/share/bash-completion/completions/git'; \
     	echo '\n## Save the command history after each command (not only at the end of the session)'; \
 		echo 'PROMPT_COMMAND="history -a; ${PROMPT_COMMAND:-}"'; \
+		echo '\n## Do not save duplicate commands that follow one another'; \
+		echo 'HISTCONTROL=ignoredups'; \
 	} >> /etc/bash.bashrc; \
 # xDebug default config
 # See: https://xdebug.org/docs/all_settings
